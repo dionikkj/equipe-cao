@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="images/logo2.svg">
+    <title>Entre ou cadastre-se</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            background-image: url("images/DD-Forest-Background-60012-Preview.jpg");
+            background-position-y: -180px;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+
+        }
+
+        * {
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            margin: 9px;
+        }
+
+        .loginsignup {
+            top: 190px;
+            position: absolute;
+            height: 65px;
+            width: 400px;
+
+        }
+
+        #logod1 {
+            position: absolute;
+            top: 100px;
+        }
+
+        #login {
+            transition: 0.5s;
+            background-color: rgba(3, 95, 182, 0);
+            color: rgb(0, 0, 0);
+            position: absolute;
+            left: 10px;
+            border: solid 1px black;
+            cursor: pointer;
+            border-radius: 0px;
+            font-size: 18px;
+            padding: 5px 20px;
+        }
+
+        #signup {
+            transition: 0.5s;
+            background-color: rgba(0, 0, 0, 0);
+            border: solid 1px black;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            border-radius: 0px;
+            font-size: 18px;
+            padding: 5px 14px;
+        }
+
+        #caixalogin {
+
+          
+            top: 255px;
+            position: absolute;
+            overflow: hidden;
+            flex-direction: column;
+            border: solid black;
+            transition: 0.5s;
+            border-width: 1px 0px 1px 0px;
+            background-color: rgba(0, 0, 0, 0);
+            height: 1px;
+            width: 450px;
+            margin: 0px;
+        }
+
+        #email {
+            background-color: rgba(240, 248, 255, 0);
+            border: solid black 1px;
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 240px
+        }
+           
+        #senha {
+            background-color: rgba(240, 248, 255, 0);
+            border: solid black 1px;
+            margin-top: 20px;
+            width: 240px;
+        }
+
+        #entrar {
+            cursor: pointer;
+            position: relative;
+           right : 200px;
+           top: 80px;
+            
+            font-size: 15px;
+            color: black;
+            background-color: white;
+            border: solid 1px;
+            border-radius: 0;
+            padding: 4px 15px;
+        }
+
+        #caixasignup {
+            top: 255px;
+            position: absolute;
+            overflow: hidden;
+            flex-direction: column;
+            border: solid black;
+            transition: 0.5s;
+            border-width: 1px 0px 1px 0px;
+            background-color: rgba(0, 0, 0, 0);
+            height: 1px;
+            width: 450px;
+            margin: 0px;
+
+
+        }
+        #xvoltar{
+            cursor: pointer;
+            font-size: 35px;
+            border: none;
+            background-color: rgba(240, 248, 255, 0);
+            top: -15px;
+            left: 5px;
+            position: absolute;
+           
+        }
+        #xvoltar:hover{
+          color: red;
+        }
+        #nome{
+            margin-top: 20px;
+            background-color: rgba(240, 248, 255, 0);
+            width: 240px;
+            border: solid 1px;
+        }
+        #email2{
+            
+            margin-left: 14px;
+            background-color: rgba(240, 248, 255, 0);
+            width: 240px;
+            border: solid 1px;
+        }
+        #senha2{
+            background-color: rgba(240, 248, 255, 0);
+            width: 240px;
+            border: solid 1px;
+        }
+        #nasc{
+            position: relative;
+            cursor:  text;
+            font-size: 14px;
+            padding: 4px;
+        }
+        #entrar2{
+            cursor: pointer;
+            position: relative;
+            left: 135px;
+            
+            font-size: 15px;
+            color: black;
+            background-color: white;
+            border: solid 1px;
+            border-radius: 0;
+            padding: 4px 15px;
+
+        }
+
+        .fundo {
+            background-image: url("images/DD-Forest-Background-60012-Preview.jpg");
+            background-position-y: -180px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            margin: 0;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            filter: blur(4px);
+            z-index: -1;
+        }
+        form{
+            width: 500px;
+            margin-left: 50px;
+        }
+        .suporte{
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        @media(max-width:600px){
+    #caixasignup{
+        width: 385px;
+       
+    }
+    #caixalogin{
+        width: 385px;
+    }
+    #login{
+        left: 40px;
+    }
+    #signup{
+        right: 40px;
+    }
+    #nasc{
+       right: 25px;
+    }
+    #entrar{
+        right: 230px;
+    }
+    #entrar2{
+        left: 110px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <img id="logod1" src="images/logo1.svg" alt="logo">
+
+    <div class="loginsignup">
+        <button id="login" onclick="caixalogin()">Login</button>
+        <button id="signup" onclick="caixasignup()">Sign Up</button>
+
+    </div>
+
+    <div id="caixalogin">
+       <button id="xvoltar" onclick="voltar()">&times</button>
+        <form action="#">
+            <label for="email">Email:</label> <input type="email" id="email" name="email" autocomplete="off" required>
+            <br>
+            <label for="senha">Senha:</label> <input type="password" id="senha" name="senha" autocomplete="off"
+                required>
+
+            <input id="entrar" type="submit" value="Entrar">
+        </form>
+        <div class="fundo"></div>
+    </div>
+    <div id="caixasignup">
+        <button id="xvoltar" onclick="voltar()">&times</button>
+        <form action="#">
+            <Label for="nome">Nome: </Label><input id="nome" name="nome" type="text" autocomplete="off" required>
+            <br>
+            <Label for="email">Email: </Label><input id="email2" name="email" type="email" autocomplete="off" required>
+            <br>
+            <Label for="senha">Senha: </Label><input id="senha2" name="senha" type="password" autocomplete="off" required>
+            <br>
+            <label for="nasc">Data de nascimento:</label> <input type="date" id="nasc" name="Data de nascimento">
+            <br>
+            <input name="termos" type="checkbox" value="sim" id="termos"> <label for="termos"> Li e aceito os termos da página.</label>
+            <br>
+            <input name="info" type="checkbox" value="sim" id="info"> <label for="info"> Desejo receber o informativo.</label>
+              <br>
+            <input id="entrar2" type="submit" value="Entrar"><a href="#">.</a>
+        </form>
+
+        <div class="fundo"></div>
+    </div>
+    <p class="suporte">Problemas ao fazer login? contate o <a href="#">suporte!</a></p>
+</body>
+<script>
+    function caixalogin() {
+         document.getElementById("login").style.border = "none"
+ document.getElementById("login").style.fontSize = "25px"
+
+        document.getElementById("caixalogin").style.height = "200px"
+        document.getElementById("signup").style.display = "none"
+        document.getElementById("login").style.left = "135px"
+
+
+    }
+    function caixasignup() {
+        document.getElementById("signup").style.border = "none"
+ document.getElementById("signup").style.fontSize = "25px"
+
+        document.getElementById("caixasignup").style.height = "335px"
+        document.getElementById("login").style.display = "none"
+        document.getElementById("signup").style.right = "135px"
+    }
+
+    function voltar() {
+         document.getElementById("login").style.border = "solid 1px"
+ document.getElementById("login").style.fontSize = "18px"
+
+ document.getElementById("signup").style.border = "solid 1px"
+ document.getElementById("signup").style.fontSize = "18px"
+
+
+
+        document.getElementById("login").style.left = "5px"
+        document.getElementById("signup").style.right = "5px"
+        document.getElementById("signup").style.display = "block"
+        document.getElementById("login").style.display = "block"
+        document.getElementById("caixalogin").style.height = "1px"
+        document.getElementById("caixasignup").style.height = "1px"
+    }
+
+</script>
+
+</html>
